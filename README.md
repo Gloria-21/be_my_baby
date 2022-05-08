@@ -82,6 +82,9 @@ This site is designed to be resposive and easy to navigate from different device
 
 ### Bugs
 
+* My account and Bag Icons are not taking the colour desired
+* Navbar is not reponsive to changes in size/ desing desired
+
 ### Version Control
 
 ### Deployment

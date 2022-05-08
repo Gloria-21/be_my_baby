@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,200;8..144,300;8..144,600&display=swap');
+
+html{
+    height: 100%;
+}
+
+body{
+    background: url('/media/hero.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #ffffff;
+    height: calc(100vh - 164px);
+    color: #7F9F8C;
+    font-family: 'Roboto Serif', sans-serif;
+    font-size: large;
+    
+}
+
+/* from Bulma taken from project Boutique Ado */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    color: #7F9F8C;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+/* buttons*/
+
+.btn-light{
+    background: #ffffff;
+    color: #555;
+}
+
+.btn-light:hover{
+    background: #b9cbc0;
+    color: #ffffff;
+    border: 2px #ffffff solid;
+}
+
+.shop-now-button {
+    background: #ffffff;
+    color: #555;
+    min-width: 260px;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #b9cbc0;
+    color: white;
+}
+
+/*-- Button for bag app -- */
+.btn-outline-black {
+    background: white;
+    color: #b9cbc0 !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
+
+/* end buttons*/
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+  
+    .header-container {
+        padding-top: 164px;
+    }
+  }
+  
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+  
+    .body {
+        height: calc(100vh - 116px);
+    }
+  }
