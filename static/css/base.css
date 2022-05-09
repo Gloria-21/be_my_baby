@@ -9,6 +9,7 @@ body{
     background-size: cover;
     background-color: #ffffff;
     height: calc(100vh - 164px);
+    background-color: #FEC89A !important;
     color: #7F9F8C;
     font-family: 'Roboto Serif', sans-serif;
     font-size: large;
@@ -78,6 +79,11 @@ body{
 
 
 /* end buttons*/
+
+.bg-apricot{
+    background: #FEC89A !important;
+    color: #ffffff !important;
+}
 
 /* -------------------------------- Media Queries */
 
