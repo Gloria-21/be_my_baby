@@ -84,6 +84,7 @@ This site is designed to be resposive and easy to navigate from different device
 
 * My account and Bag Icons are not taking the colour desired
 * Navbar is not reponsive to changes in size/ desing desired
+* Issue with models.py when applied to products.json. On the 0001_initial.py was showing img_url on the fields migrated instead of image_url used on the product.json. the migration process had to be run twice in order to solve the issue as it wasn't applying the migration properly.
 
 ### Version Control
 

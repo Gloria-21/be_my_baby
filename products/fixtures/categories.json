@@ -1,28 +1,26 @@
 [
-    {
-      "pk": 1,
-      "model": "products.category",
-      "fields": {
-        "name": "cot_bed",
-        "friendly_name": "Cot_bed"
-      }
-    },
-
-    {
-        "pk": 2,
-        "model": "products.category",
-        "fields": {
-          "name": "changing_unit",
-          "friendly_name": "Changing_unit"
-        }
-      },
-
-      {
-        "pk": 3,
-        "model": "products.category",
-        "fields": {
-          "name": "chairs",
-          "friendly_name": "Chairs"
-        }
-      }
+  {
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+      "name": "cot_bed",
+      "friendly_name": "Cot bed"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+      "name": "changing_unit",
+      "friendly_name": "Changing unit"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+      "name": "chairs",
+      "friendly_name": "Chairs"
+    }
+  }
 ]
