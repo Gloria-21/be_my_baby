@@ -17,10 +17,10 @@
                 Home & Nursery
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Cot Bed</a>
-                <a href="" class="dropdown-item">Changing Units</a>
-                <a href="" class="dropdown-item">Chairs</a>
-                <a href="" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?category=cot_bed" class="dropdown-item">Cot Bed</a>
+                <a href="{% url 'products' %}?category=changing_unit" class="dropdown-item">Changing Units</a>
+                <a href="{% url 'products' %}?category=chairs" class="dropdown-item">Chairs</a>
+                <a href="{% url 'products' %}?category=cot_bed,changing_unit,chairs" class="dropdown-item">All Products</a>
             </div>
         </li>
     </ul>
