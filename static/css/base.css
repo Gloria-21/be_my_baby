@@ -25,6 +25,14 @@ body{
     width: 1.5rem;
 }
 
+.fa-user{
+    color: #7F9F8C;
+}
+
+.fa-shopping-bag {
+    color: #7F9F8C;
+}
+
 .logo-font {
     text-transform: uppercase;
     color: #7F9F8C;
@@ -73,7 +81,7 @@ body{
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: #7F9F8C;
     color: white !important;
 }
 
@@ -107,6 +115,7 @@ body{
 	background: #ffffff !important;
 	z-index: -1;
 }
+
 
 /* -------------------------------- Media Queries */
 
