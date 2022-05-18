@@ -3,13 +3,14 @@
 {% load bag_tools %}
 
 {% block extra_css%}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}"
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>        
+            <div class="col">
+            </div>        
         </div>
     </div>
 {% endblock %}
@@ -80,13 +81,13 @@
                 {% csrf_token %}
                 <!-- first fieldset for details-->
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+                    <legend class="fieldset-label small font-weight-bold text-black px-2 w-auto">Details</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>
                 <!-- second fieldset for delivery with render form as crispyfield template tag-->
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
+                    <legend class="fieldset-label small font-weight-bold text-black px-2 w-auto">Delivery</legend>
                     {{ order_form.phone_number | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
                     {{ order_form.postcode | as_crispy_field }}
@@ -108,34 +109,34 @@
                     </div>
                 </fieldset>
                 <fieldset class="px-3">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                    <legend class="fieldset-label small font-weight-bold text-black px-2 w-auto">Payment</legend>
                     <!-- A Stripe card element will go here -->
                     <div class="mb-3" id="card-element"></div>
-
                     <!-- Used to display form errors -->
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                 </fieldset>
                     <!--link back to the shopping bag-->
-                <div class="submit-button text-right mt-5 mb-2">                    
-                    <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="font-weight-bold">Adjust Bag</span>
-                    </a>
-                    <!-- Submit button-->
-                    <button id="submit-button" class="btn btn-black rounded-0">
-                        <span class="font-weight-bold">Complete Order</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </button>
+                <div class="submit-button text-right mt-5 mb-2">  
                     <p class="small text-danger my-0">
                         <span class="icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </span>
                         <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
-                    </p>
+                    </p>                  
+                    <a href="{% url 'view_bag' %}" class="btn btn-black rounded-0">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="font-weight-bold text-green">Back to bag</span>
+                    </a>
+                    <!-- Submit button-->
+                    <button id="submit-button" class="btn btn-black rounded-0">
+                        <span class="font-weight-bold text-green">Complete Order</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </button>
+
                 </div>
             </form>
             </div>
