@@ -1,0 +1,1 @@
+web: gunicorn be_my_baby.wsgi:application
