@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-fwb9r$kic_0ky9067)5ob$95k*=wl7-nu)$%wf(-6m$h*b1($k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['be-my-baby.heroku.com', 'localhost']
+ALLOWED_HOSTS = ['be-my-baby.herokuapp.com', 'localhost']
 
 
 # Application definition
