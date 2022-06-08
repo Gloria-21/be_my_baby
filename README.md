@@ -32,7 +32,7 @@ This site is designed to be resposive and easy to navigate from different device
 
 * **Wireframe**
 
-* [Desktop Wireframe Home](https://drive.google.com/file/d/1qqa30S-FQxxlqpJSE5VpgMmted6ee5LR/view?usp=sharing))
+* [Desktop Wireframe Home](https://drive.google.com/file/d/1qqa30S-FQxxlqpJSE5VpgMmted6ee5LR/view?usp=sharing)
                     
 * [Mobile Wireframe](https://drive.google.com/file/d/1i0BgbKDtbHuSWoE3gigl7cpu8fDkUwii/view?usp=sharing)
 
@@ -90,7 +90,7 @@ I used this tool as a main source to implement my code, trying the functionality
 
 To check the validity of the codes I have used 
 * [W3C Markup Validation](https://validator.w3.org/)
-   - For [index.html]()
+   - For [index.html](/static/docs/images/index_validator.png)
 
 
 
