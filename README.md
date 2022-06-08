@@ -4,7 +4,7 @@
 Be my baby is an eCommerce site aimed to new parents or parents to be, that are looking for equipment for the new addition to the the family.
 This site is designed to be resposive and easy to navigate from different devices as well as to be accesible for all users.
 
-[View the live project here.](https://8000-gloria21-bemybaby-sy6g7t62dw6.ws-eu45.gitpod.io/)
+[View the live project here](https://8000-gloria21-bemybaby-sy6g7t62dw6.ws-eu47.gitpod.io/)
 
 ##  Contents
 ### UX (User experience)
@@ -117,8 +117,9 @@ To check the website performance level as well as the speed I used [Google light
 * Issue with models.py when applied to products.json. On the 0001_initial.py was showing img_url on the fields migrated instead of image_url used on the product.json. the migration process had to be run twice in order to solve the issue as it wasn't applying the migration properly.
 
 ### unfixed bugs
-* Minus button not in the correct place when there is a prodcut selected and ready to add into the bag, I have tried move location, CSS but it is not fixed
+* Minus button not in the correct place when there is a product selected and ready to add into the bag, I have tried move location, CSS but it is not fixed
 * Another bug unsolved due to lack to time is the links on my account, and shopping bag that change colour when moved to a different size such as mobile
+* Heroku has been very challenging as the use of it has changed due to security issues and the automated deployment from github has been disabled. In my case I have tried to log in using the CLI, however I have a message "IP address mismatch". I have tried to fix it going to the CLI documentation and use teh HTTP proxy, however is still not working properly.
 
 ### Test user stories
 
@@ -153,7 +154,7 @@ This website has been developed on Gitpod, using Github to host the repository
 
 These are the step followed to deploy via Gitpod:
 1. Log in to the Gitpod account 
-2. Chose the Weird and Wondeful repository
+2. Chose the Be_my_baby repository
 3. Add your code 
 4. Type "python3 -m http.server" on the terminal
 5. A new screen will pop up with the results of the code on the browser
@@ -162,7 +163,7 @@ These are the step followed to deploy via Gitpod:
 These are the steps followed to deploy this website using GitHub:
 
 1. Log in to your  GitHub account
-2. Select Weird and wonderful on my repositories
+2. Select Be_my_baby on my repositories
 3. Go to settings on the repository
 4. Scroll down to the GitHub pages area
 5. Select the Master Branch from the Source dropdown menu
@@ -185,6 +186,24 @@ A clone of the original repository should be available on your computer
 
 ### Heroku App
 
+The project was developed using GitPod and pushed to GitHub then deployed on Heroku using these instructions:
+
+1. Log in to Heroku and create a new app by clicking "New" and "Create New App" and giving it an original name and setting the region to closest to your location.
+2. Navigate to Heroku Resources and add Postgres using the free plan.
+3. Create a requirements.txt file using command pip3 freeze > requirements.txt
+4. Create a Procfile with the terminal command web: gunicorn be_my_baby.wsgi:application and at this point checking the Procfile to make sure there is no extra blank     line as this can cause issues when deploying to Heroku.
+5. Use the loaddata command to load the fixtures for both json files: python3 manage.py loaddata categories.json and python3 manage.py loaddata products.json
+6. If it returns error message: django.db.utils.OperationalError: FATAL: role does not exist run unset PGHOSTADDR in your terminal and run the commands in step 11 again.
+7. From the CLI log in to Heroku using command heroku login -i.
+8. Temporarily disable Collectstatic by running: heroku:config:set DISABLE_COLLECTSTATIC=1 --app So that Heroku won't try to collect static files when we deploy.
+9. Add Heroku app name to ALLOWED_HOSTS in settings.py.
+10. Commit changes to GitHub using git add ., git commit -m , git push.
+11. Then deploy to Heroku using git push heroku main. If the git remote isn't initialised you may have to do that first by running *heroku git:remote -a
+12. Create a superuser using command: heroku run python3 manage.py createsuperuser so that you can log in to admin as required.
+13. From Heroku dashboard click "Deploy" -> "Deployment Method" and select "GitHub"
+14. Search for your GitHub repo and connect then Enable Automatic Deploys.
+15. Generate secret key. Strong secret keys can be obtained from MiniWebTool. This automatically generates a secret key 50 characters long with alphanumeric characters and symbols.
+16. Add secret key to GitPod variables and Heroku config vars.
 
 
 ### Credits
