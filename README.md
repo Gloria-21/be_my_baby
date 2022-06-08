@@ -1,4 +1,4 @@
-# Be My Baby ()
+# Be My Baby
 ## About
 
 Be my baby is an eCommerce site aimed to new parents or parents to be, that are looking for equipment for the new addition to the the family.
