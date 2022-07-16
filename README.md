@@ -4,7 +4,7 @@
 Be my baby is an eCommerce site aimed to new parents or parents to be, that are looking for equipment for the new addition to the the family.
 This site is designed to be resposive and easy to navigate from different devices as well as to be accesible for all users.
 
-[View the live project here](https://8000-gloria21-bemybaby-sy6g7t62dw6.ws-eu47.gitpod.io/)
+[View the live project here](https://be-my-baby.herokuapp.com/)
 
 ##  Contents
 ### UX (User experience)
@@ -14,8 +14,8 @@ This site is designed to be resposive and easy to navigate from different device
     3. As a user you will be able to add and remove items to the bag
     4. As a user you will be able to check out and pay for your items
 
-### Desing Choices
-* **favicon**
+## Desing Choices
+* **Favicon**
 
      I have chosen the symbol of a pram as it is quite relatable to website theme. To create it I have used [canva](https://www.canva.com/en_in/)
 * **Typograghy**
@@ -36,12 +36,12 @@ This site is designed to be resposive and easy to navigate from different device
                     
 * [Mobile Wireframe](https://drive.google.com/file/d/1i0BgbKDtbHuSWoE3gigl7cpu8fDkUwii/view?usp=sharing)
 
-### Features
+## Features
 * **Future Features**
 
 In the near future I would like to finish the project, due to time constriction it is not quite done. I want to  develop further the profiles and the admin section. In  the longer term I would love to add a blog section with advice for new parents on which products are more suitables for their babies. Also I would like to add a different range of products to the shop.
 
-### Tecnologies used
+## Tecnologies used
 * **Languages**
 
     * [HTML5](https://en.wikipedia.org/wiki/HTML5) 
@@ -81,7 +81,7 @@ In the near future I would like to finish the project, due to time constriction 
         Used to generate a favicon for the website title.
 
 
-### Testing
+## Testing
 
 I have done the testing for my website using the dev tools on google chrome. I have been testing regularly checking that the results were the expected on different sizes, from mobile devices to desktop and tablet, making sure the website was responsive in all of them.
 I used this tool as a main source to implement my code, trying the functionality and styling effects there first and adding them to my code afterwards.
@@ -110,18 +110,16 @@ To check the website performance level as well as the speed I used [Google light
 * [Checkout](/static/docs/images/lighthouse-checkout.png)
 
 
-### Bugs
+## Bugs
 
 * My account and Bag Icons were proving challeging as they weren't taking the colours chosen due to inheriting elements from CSS. In the end logo-font and specific class for each solved the problem
 * Navbar is not reponsive to changes in size/ desing desired
 * Issue with models.py when applied to products.json. On the 0001_initial.py was showing img_url on the fields migrated instead of image_url used on the product.json. the migration process had to be run twice in order to solve the issue as it wasn't applying the migration properly.
 
-### unfixed bugs
+### Unfixed bugs
 * Minus button not in the correct place when there is a product selected and ready to add into the bag, I have tried move location, CSS but it is not fixed
 * Another bug unsolved due to lack to time is the links on my account, and shopping bag that change colour when moved to a different size such as mobile
-* Heroku has been very challenging as the use of it has changed due to security issues and the automated deployment from github has been disabled. In my case I have tried to log in using the CLI, however I have a message "IP address mismatch". I have tried to fix it going to the CLI documentation and use teh HTTP proxy, however is still not working properly.
-
-### Test user stories
+## Test user stories
 
 1. As a user you will be able to find the products that you are looking for:
     As a new parent I want to access the website and in an intuitive way I want to filter the products and find what I am looking for very easily.
@@ -146,7 +144,7 @@ To check the website performance level as well as the speed I used [Google light
     [Checkout-sucess](/static/docs/images/checkout.png)
 
 
-### Deployment
+## Deployment
 
 This website has been developed on Gitpod, using Github to host the repository
 
@@ -204,11 +202,50 @@ The project was developed using GitPod and pushed to GitHub then deployed on Her
 14. Search for your GitHub repo and connect then Enable Automatic Deploys.
 15. Generate secret key. Strong secret keys can be obtained from MiniWebTool. This automatically generates a secret key 50 characters long with alphanumeric characters and symbols.
 16. Add secret key to GitPod variables and Heroku config vars.
+17. Set up Amazon AWS S3 bucket 
 
 
-### Credits
+### AWS S3 Bucket Set up
 
-To create this project I have used images from [Babyblooms](https://www.babyblooms.co.uk/collections/home-nursery)
-I have followed the proyect Boutique Ado, form Code Institute, that has been very instructive
-Also I have been inspired by the wonderful project that [Suzybee1987](https://github.com/suzybee1987) has done [Knit-happens](https://github.com/suzybee1987/knit-happens)
+1. Create an Amazon AWS account
+2. Search for S3 and create a new bucket and allow public access
+3. On the Properties tab turn on Static website hosting using the default values of index.html and errors.html
+4. Under Permissions tab include the CORS configuration using the following:
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+
+5. Create security policy: S3 Bucket Policy, allow all principles by adding a * and Amazon S3 services and selecting Get Object action. Paste ARN from Bucket Policy, add statement, generate policy and copy and paste into Bucket Policy. Also add /* at end of resource key to allow use of all pages.
+
+6. Under public access select access to all List Objects.
+
+7. Create Group for the bucket through IAM. Create policy by importing AWS S3 Full Access policy and add ARN from bucket to the policy resources. Attach policy to group.
+
+8. Create user, give programmatic access and add user to the group. Download CSV file when prompted to save access key ID an secret access key to save to environment and config variables.
+
+9. Add AWS_STORAGE_BUCKET_NAME, AWS_S3_REGION_NAME = 'eu-west-2' to settings.py.
+
+10. Add, commit and push to GitHub then navigate to Heroku to confirm static files collected successfully on the Build Log. The DISABLE_COLLECTSTATIC variable can now be deleted.
+
+11. With your S3 bucket now set up, you can create a new folder called media (at the same level as the newly added static folder) and upload any required media files to it.
+
+
+## Credits
+
+- I have to thank my mentor Victor Miclovich for suggesting me the germen of the idea for this project, also for his patients and support and providing essential information on the calls during a very challenging time for me.
+- To create Be_my_baby I have followed the project Boutique Ado, from the Code Institute. The main functionality for this project has been taken from it. 
+- Images: To create this project I have used images from [Babyblooms](https://www.babyblooms.co.uk/collections/home-nursery)
+
+- Also I have been inspired by the wonderful project that [Suzybee1987](https://github.com/suzybee1987) has done [Knit-happens](https://github.com/suzybee1987/knit-happens)
 
