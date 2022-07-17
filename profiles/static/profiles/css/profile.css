@@ -1,3 +1,7 @@
 .container {
     width: 100%;
 }
+
+.profile-form-input::placeholder{
+    color:#aab7c4;
+}
