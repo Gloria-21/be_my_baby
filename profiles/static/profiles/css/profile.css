@@ -1,7 +1,16 @@
+.order-history {
+    max-height: 416px;
+    overflow-y: auto;
+}
+
 .container {
     width: 100%;
 }
 
 .profile-form-input::placeholder{
     color:#aab7c4;
+}
+
+.btn-info{
+    background: #7F9F8C;
 }
