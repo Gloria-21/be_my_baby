@@ -13,6 +13,7 @@ This site is designed to be resposive and easy to navigate from different device
     2. As a user you will be able to click on them and see their characteristic
     3. As a user you will be able to add and remove items to the bag
     4. As a user you will be able to check out and pay for your items
+    5. As a superuser you will be able to add, edit and delete products 
 
 ## Desing Choices
 * **Favicon**
@@ -52,6 +53,8 @@ In the near future I would like to finish the project, due to time constriction 
     
     * [Python 3](https://www.python.org/)
 
+    
+
 * **Tools**
 
     * [Git](https://git-scm.com/)
@@ -63,10 +66,16 @@ In the near future I would like to finish the project, due to time constriction 
         Used to store, host and deploy the project files and source code after being pushed from Git
 
     * [Stripe](https://stripe.com/gb)
+
+        Payment processing platform
     
     * [Heroku](https://www.heroku.com/home)
 
         Used for the deployment of live site
+    
+    * [AWS](https://aws.amazon.com/)
+
+        Cloud application used to hold media files
 
     * [Font Awesome](https://fontawesome.com/)
 
@@ -123,25 +132,24 @@ To check the website performance level as well as the speed I used [Google light
 
 1. As a user you will be able to find the products that you are looking for:
     As a new parent I want to access the website and in an intuitive way I want to filter the products and find what I am looking for very easily.
-    The user has two different ways to filter the products. A dropdown that filters by price, rating and category and another (Home and Nursery) that filters by Cot Bed, Chaning Units, chairs and all products [Filters](/static/docs/images/filters.png)
+    The user has two different ways to filter the products. A dropdown that [filters](/static/docs/images/filters.png) by price, rating and category and another (Home and Nursery) that filters by Cot Bed, Chaning Units, chairs and all products.
 
-2. As a user you will be able to click on them and see their characteristic
-    As a user I would like to have more information about the product that I am internded to buy, when the selected product is clicked, it shows the information and has the possibility to be added to the bag or keep shopping if the product is not meeting your expectations
-    [Product](/static/docs/images/product.png)
+2. As a user you will be able to click on them and see their characteristics:
+    As a user I would like to have more information about the [product](/static/docs/images/product.png) that I am intended to buy, when the selected product is clicked, it shows the information and has the possibility to be added to the bag or keep shopping if the product is not meeting your expectations.
 
-3. As a user you will be able to add item to the bag
-    Once the product is selected there is a button to add it to the bag. In this case a message will pop up to inform the user taht the product has been successfully added to the bag
-    [Add to bag](/static/docs/images/stripe-sucess.png)
-    Also the bag can be modified and the user can remove an item that is already in there. The user will received another message informing that the product has been successfully removed 
-    [Remove from the bag](/static/docs/images/stripe_remove.png)
+3. As a user you will be able to add item to the bag:
+    Once the product is selected there is a button to [add it to the bag](/static/docs/images/stripe-sucess.png). In this case a message will pop up to inform the user taht the product has been successfully added to the bag.
+    
+    Also the bag can be modified and the user can [remove](/static/docs/images/stripe_remove.png) an item that is already in there. The user will received another message informing that the product has been successfully removed.
 
- 4. As a user you will be able to check out and pay for your items. 
-    The user will be able to do the checkout securely, the user will be redireceted to the shopping bag screen
-    [Shopping bag](/static/docs/images/shoppingbag.png)
-    Once in there the user will click the secure checkout button and be redirected to the checkout page and being to fill a form in order to get payement and get the product delivered
-    [Checkout](/static/docs/images/checkout.png)
-    After that the user will see a screen with all the information of the purchase and an email will be send to the address provided 
-    [Checkout-sucess](/static/docs/images/checkout.png)
+ 4. As a user you will be able to check out and pay for your items: 
+    The user will be able to do the checkout securely, the user will be redirected to the [shopping bag](/static/docs/images/shoppingbag.png)  screen.
+    Once in there the user will click the secure checkout button and be redirected to the [checkout](/static/docs/images/checkout.png) page and being to fill a form in order to get payement and get the product delivered.
+
+    After that the user will see a screen with all the information of the [purchase](/static/docs/images/checkout-success.png) and after clicking the checkout button a new screen with an spinnig icon will show while the payment on [Stripe](/static/docs/images/stripe.png) is being processed.
+    After this an email will be send to the address provided.
+
+5. As a superuser you will be able to add, [edit](/static/docs/images/edit-delete.png) and [delete](/static/docs/images/delete.png) products throught the [product management](/static/docs/images/product_management.png) tool
 
 
 ## Deployment
@@ -204,7 +212,6 @@ The project was developed using GitPod and pushed to GitHub then deployed on Her
 16. Add secret key to GitPod variables and Heroku config vars.
 17. Set up Amazon AWS S3 bucket 
 
-
 ### AWS S3 Bucket Set up
 
 1. Create an Amazon AWS account
@@ -227,19 +234,25 @@ The project was developed using GitPod and pushed to GitHub then deployed on Her
 ]
 
 5. Create security policy: S3 Bucket Policy, allow all principles by adding a * and Amazon S3 services and selecting Get Object action. Paste ARN from Bucket Policy, add statement, generate policy and copy and paste into Bucket Policy. Also add /* at end of resource key to allow use of all pages.
-
 6. Under public access select access to all List Objects.
-
 7. Create Group for the bucket through IAM. Create policy by importing AWS S3 Full Access policy and add ARN from bucket to the policy resources. Attach policy to group.
-
 8. Create user, give programmatic access and add user to the group. Download CSV file when prompted to save access key ID an secret access key to save to environment and config variables.
-
 9. Add AWS_STORAGE_BUCKET_NAME, AWS_S3_REGION_NAME = 'eu-west-2' to settings.py.
-
 10. Add, commit and push to GitHub then navigate to Heroku to confirm static files collected successfully on the Build Log. The DISABLE_COLLECTSTATIC variable can now be deleted.
-
 11. With your S3 bucket now set up, you can create a new folder called media (at the same level as the newly added static folder) and upload any required media files to it.
 
+### Gmail Client
+
+In settings.py change the DEFAULT_FROM_EMAIL to your own email address.
+
+1. Go to your Gmail account and navigate to the 'Settings' tab.
+2. Go to 'Accounts and Imports', 'Other Google Account Settings'.
+3. Go to the 'Security' tab, and scroll down to 'Signing in to Google'.
+4. If required, click to turn on '2-step Verification**', then 'Get Started', and enter your password.
+5. Verify using your preferred method, and turn on 2-step verification.
+6. Go back to 'Security', 'Signing in to Google', then go to 'App Passwords'.
+7. Enter your password again if prompted, then set 'App' to Mail, 'Device' to Other, and type in Django.
+8. Copy and paste the passcode that shows up, this is your 'EMAIL_HOST_PASS' variable to add to your environment/config variables.                'EMAIL_HOST_USER' is the Gmail email address.
 
 ## Credits
 
