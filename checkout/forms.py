@@ -3,7 +3,7 @@ from .models import Order
 
 
 class OrderForm(forms.ModelForm):
-    class Meta:        
+    class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',
@@ -44,9 +44,8 @@ class OrderForm(forms.ModelForm):
                     placeholder = f'{placeholders[field]} *'
                 else:
                     placeholder = placeholders[field]
-                """
-                setting all the placeholder att to their values in the dictionary
-                """
+                    """setting all the placeholder att 
+                    to their values in the dictionary"""
                 self.fields[field].widget.attrs['placeholder'] = placeholder
                 """CSS class"""
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'

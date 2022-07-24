@@ -104,7 +104,7 @@ def build_post_upgrade():
     upgrades = json.loads(r.content.decode("utf-8"))
     content = ""
 
-    for k,v in upgrades.items():
+    for k, v in upgrades.items():
         if float(k) > THIS_VERSION:
             print(f"Adding version changes for {k} to post_upgrade.sh")
             content += v
@@ -114,7 +114,9 @@ def build_post_upgrade():
         with open(".vscode/post_upgrade.sh", "w") as f:
             f.writelines(content)
     
-    print("Built post_upgrade.sh. Restart your workspace for it to take effect")
+    print(
+        "Built post_upgrade.sh. Restart your workspace for it to take effect"
+        )
 
 
 def process(file, suffix):
