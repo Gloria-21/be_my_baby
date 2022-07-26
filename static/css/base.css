@@ -288,3 +288,7 @@ body{
 .row-review {
     margin-right: 30px;
 }
+
+.btn-review {
+    display: inline-block;
+}

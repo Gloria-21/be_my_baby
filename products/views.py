@@ -65,9 +65,24 @@ def product_detail(request, product_id):
     """A view to show individual product selected """
 
     product = get_object_or_404(Product, pk=product_id)
+    form = ReviewForm()
+    reviews = product.reviews
+    new_review = None
 
+    if request.method == 'POST':
+        form = ReviewForm(data=request.POST)
+        if form.is_valid():
+            new_review = form.save(commit=True)
+            new_review.product = product
+            new_review.save()
+        else:
+            form = ReviewForm()
+    
     context = {
         'product': product,
+        'form': form,
+        'reviews': reviews,
+        'new_review': new_review
     }
 
     return render(request, 'products/product_detail.html', context)
