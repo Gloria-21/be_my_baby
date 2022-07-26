@@ -38,9 +38,45 @@ This site is designed to be resposive and easy to navigate from different device
 * [Mobile Wireframe](https://drive.google.com/file/d/1i0BgbKDtbHuSWoE3gigl7cpu8fDkUwii/view?usp=sharing)
 
 ## Features
+
+* **Create Profile**
+    * Users can:
+        * Create a profile to save their orders and personal information
+        * Confirm their details are correct via email verification
+        * Store details for faster checkout
+
+* **Login to Profile**
+    * Users can:
+        * Log in to profile to see their orders and personal information
+        * Edit personal information if required
+
+* **Product page**
+    * Users can:
+        * See products by Name, category and price
+        * Filter by different categories of products
+        * Click on the product to find more information about it
+        * Add a review to a chosen product
+
+    * Superusers can:
+        * Add, edit and delete products
+
+* **Header**
+    * All users can navigate to home, products and bag pages
+    * Users logged in can access profile pages
+    * Users not logged in can access log in and register pages
+
+* **Defensive Design**
+    * Form Validation:
+        * Form validation has been added to every form to ensure all required information is included before submitting. If incorrect data is input a warning text appears to advise the user how to continue
+    * Unauthorised Attempts:
+        * An error is launched if the user attempts to visit a part of the site where they are not authorised
+    * @login_required:
+        * @login_required decorator added to restrict access to certain pages. If a logged-out user tries to access a restricted page, they will be redirected to the login page.
+        * Only authorised users may perform certain actions: Eg add, edit, delete product and edit
+
 * **Future Features**
 
-In the near future I would like to finish the project, due to time constriction it is not quite done. I want to  develop further the profiles and the admin section. In  the longer term I would love to add a blog section with advice for new parents on which products are more suitables for their babies. Also I would like to add a different range of products to the shop.
+In the near future I would like to improve the blog section with advice for new parents on which products are more suitables for their babies. Also I would like to add a different range of products to the shop.
 
 ## Tecnologies used
 * **Languages**
