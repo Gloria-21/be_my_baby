@@ -5,12 +5,11 @@
 <link rel="stylesheet" href="">
 {% endblock %}
 
-{% block extra_js%}
+{% block content %}
 <div class="container">
     <div class="col-12 col-md-10 col-lg-4 offset-lg-4 mt-5">
         <h4>Welcome to the blog!</h4>
-        <a class="button is-danger my-4" href="{% url 'add_post' %}">New Post<i
-            class="fas fa-plus-circle m-2"></i></a>
+        <a class="button is-danger my-4" href="#">New Post<i class="fas fa-plus-circle m-2"></i></a>
     </div>
 </div>
 {% if posts %}
@@ -18,7 +17,7 @@
 <div class="card">
     <div class="card-body">
         <div class="card-title">
-            <a href="{% url 'post_detail' post.slug %}" class="title-heading-small blog-title">
+            <a href="#" class="title-heading-small blog-title">
                 {{ post.title | truncatechars:15 | capfirst }}
             </a>
         </div>
@@ -30,7 +29,3 @@
 {% endif %}
 
 {% endblock %}
-
-{% block content%}
-
-{% endblock%}

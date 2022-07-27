@@ -6,7 +6,8 @@ from .models import Post
 def blog(request):
     posts = Post.objects.all()
     template = 'blog/blog.html'
-    context = {'posts': posts}
-
+    context = {
+        'posts': posts
+    }
     return render(request, template, context)
 
