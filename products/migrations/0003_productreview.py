@@ -16,13 +16,16 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='ProductReview',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=254)),
                 ('content', models.TextField(blank=True, null=True)),
                 ('rating', models.IntegerField()),
                 ('date_added', models.DateTimeField(auto_now_add=True)),
-                ('product', models.ForeignKey(default=None, on_delete=django.db.models.deletion.CASCADE, related_name='reviews', to='products.product')),
-                ('user', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to=settings.AUTH_USER_MODEL)),
+                ('product', models.ForeignKey(
+                    default=None, on_delete=django.db.models.deletion.CASCADE, related_name='reviews', to='products.product')),
+                ('user', models.ForeignKey(
+                    blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]

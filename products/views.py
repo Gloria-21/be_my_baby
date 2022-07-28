@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category, ProductReview
+from .models import Product, Category
 from .forms import ProductForm, ReviewForm
 
 # Create your views here.
@@ -76,8 +76,7 @@ def product_detail(request, product_id):
             new_review.product = product
             new_review.save()
         else:
-            form = ReviewForm()
-    
+            form = ReviewForm()    
     context = {
         'product': product,
         'form': form,
