@@ -78,7 +78,8 @@ This site is designed to be resposive and easy to navigate from different device
 
 * **Future Features**
 
-In the near future I would like to develop the blog section further as it is not quite finished due to time constriction. I would like to implement the CRUD operations so the user can add comments to the posts and the superuser can add, edit and delete posts. Also I would like to add a different range of products to the shop.
+In the near future I would like to develop the blog section further as it is not quite finished due to time constriction. I would like to implement the CRUD operations so the user can add comments to the posts and the superuser can add, edit and delete posts. 
+Regarding the reviews, I would like to improve the styling as again, due to time running out, it is not showing as I would like to.
 
 ## Tecnologies used
 * **Languages**
