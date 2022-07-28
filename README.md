@@ -1,4 +1,6 @@
 # Be My Baby
+
+![Alt text](/media/responsive_mockup.png)
 ## About
 
 Be my baby is an eCommerce site aimed to new parents or parents to be, that are looking for equipment for the new addition to the the family.
@@ -76,7 +78,7 @@ This site is designed to be resposive and easy to navigate from different device
 
 * **Future Features**
 
-In the near future I would like to improve the blog section as it hasn't being developed fully due to time constriction. Also I would like to add a different range of products to the shop.
+In the near future I would like to develop the blog section further as it is not quite finished due to time constriction. I would like to implement the CRUD operations so the user can add comments to the posts and the superuser can add, edit and delete posts. Also I would like to add a different range of products to the shop.
 
 ## Tecnologies used
 * **Languages**
