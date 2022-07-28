@@ -9,11 +9,11 @@ This site is designed to be resposive and easy to navigate from different device
 ##  Contents
 ### UX (User experience)
 - ### User stories
-    1. As a user you will be able to find the products that you are looking for
-    2. As a user you will be able to click on them and see their characteristic
-    3. As a user you will be able to add and remove items to the bag
-    4. As a user you will be able to check out and pay for your items
-    5. As a superuser you will be able to add, edit and delete products 
+    1. As a user, you will be able to find the products that you are looking for
+    2. As a user, you will be able to click on them and see their characteristic
+    3. As a user, you will be able to add and remove items to the bag
+    4. As a user, you will be able to check out and pay for your items
+    5. As a superuser, you will be able to add, edit and delete products 
 
 ## Desing Choices
 * **Favicon**
@@ -76,7 +76,7 @@ This site is designed to be resposive and easy to navigate from different device
 
 * **Future Features**
 
-In the near future I would like to improve the blog section with advice for new parents on which products are more suitables for their babies. Also I would like to add a different range of products to the shop.
+In the near future I would like to improve the blog section as it hasn't being developed fully due to time constriction. Also I would like to add a different range of products to the shop.
 
 ## Tecnologies used
 * **Languages**
@@ -295,6 +295,6 @@ In settings.py change the DEFAULT_FROM_EMAIL to your own email address.
 - I have to thank my mentor Victor Miclovich for suggesting me the germen of the idea for this project, also for his patients and support and providing essential information on the calls during a very challenging time for me.
 - To create Be_my_baby I have followed the project Boutique Ado, from the Code Institute. The main functionality for this project has been taken from it. 
 - Images: To create this project I have used images from [Babyblooms](https://www.babyblooms.co.uk/collections/home-nursery)
-
-- Also I have been inspired by the wonderful project that [Suzybee1987](https://github.com/suzybee1987) has done [Knit-happens](https://github.com/suzybee1987/knit-happens)
+- [Code with Stein](https://www.youtube.com/c/CodeWithStein) has been quite useful in order to create the review section and the blog for this project.
+- I have been inspired by the wonderful project that [Suzybee1987](https://github.com/suzybee1987) has done [Knit-happens](https://github.com/suzybee1987/knit-happens) and [Harry Dhillon](https://github.com/Harry-Leepz) with his project [Nourish-and-lift](https://github.com/Harry-Leepz/Nourish-and-Lift)
 

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="">
+<link rel="stylesheet" href="{% static 'blog/blog.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -14,15 +14,36 @@
 </div>
 {% if posts %}
 {% for post in posts %}
-<div class="card">
-    <div class="card-body">
-        <div class="card-title">
-            <a href="#" class="title-heading-small blog-title">
-                {{ post.title | truncatechars:15 | capfirst }}
-            </a>
+    <div class="container">
+        <div class="columns is-justify-content-center has-text-centered">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <a href="#" class="title-heading-small blog-title">
+                            {{ post.title | truncatechars:15 | capfirst }}
+                        </a>
+                    </div>
+                    <small> Posted at {{ post.date_added}}</small>
+                        <p>{{ post.intro }}</p>
+                </div>
+                {% if post.image %}
+                    <a href="{% url 'post_detail' post.slug %}">
+                        <div class="card-image">
+                            <figure class="is-flex is-align-items-center is-justify-content-center image is-height-300">
+                                <img src="{{ post.image.url }}" alt="image for {{ post.title }}">
+                            </figure>
+                        </div>
+                    </a>
+                    {% else %}
+                    <div class="card-image">
+                        <figure class="is-flex is-align-items-center is-justify-content-center image is-height-300">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="image for {{ post.title }}">
+                        </figure>
+                    </div>
+                    {% endif %}
+            </div>
         </div>
     </div>
-</div>
 {% endfor %}
 {% else %}
 <h4 class="title-heading-small">No posts yet</h4>
