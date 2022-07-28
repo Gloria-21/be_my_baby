@@ -67,6 +67,9 @@ This site is designed to be resposive and easy to navigate from different device
     * Users logged in can access profile pages
     * Users not logged in can access log in and register pages
 
+* **Blog**
+    * Guest users can view blog post
+
 * **Defensive Design**
     * Form Validation:
         * Form validation has been added to every form to ensure all required information is included before submitting. If incorrect data is input a warning text appears to advise the user how to continue
@@ -153,7 +156,11 @@ To check the website performance level as well as the speed I used [Google light
 
 * [Homepage](/static/docs/images/lighthouse-homepage.png)
 * [Products](/static/docs/images/lighthouse-products.png)
+* [Product detail](/static/docs/images/product_details.png)
+* [Bag](/static/docs/images/lighthouse_bag.png)
 * [Checkout](/static/docs/images/lighthouse-checkout.png)
+* [Profile](/static/docs/images/lighthouse_profile.png)
+* [Blog](/static/docs/images/lighthouse_blog.png)
 
 
 ## Bugs
