@@ -121,7 +121,7 @@ In the near future I would like to improve the blog section as it hasn't being d
 
         Used to compress images for better user experience
 
-    * [Favicon](https://favicon.io/)
+    * [Favicon](https://realfavicongenerator.net/)
 
         Used to generate a favicon for the website title.
 
@@ -136,8 +136,6 @@ I used this tool as a main source to implement my code, trying the functionality
 To check the validity of the codes I have used 
 * [W3C Markup Validation](https://validator.w3.org/)
    - For [index.html](/static/docs/images/index_validator.png)
-
-
 
 * [W3C CSS Validation](/static/docs/images/validator-base.css.png)
 
@@ -157,35 +155,35 @@ To check the website performance level as well as the speed I used [Google light
 
 ## Bugs
 
-* My account and Bag Icons were proving challeging as they weren't taking the colours chosen due to inheriting elements from CSS. In the end logo-font and specific class for each solved the problem
-* Navbar is not reponsive to changes in size/ desing desired
+* My account and Bag Icons were proving challenging as they weren't taking the colours chosen due to inheriting elements from CSS. In the end, logo-font and specific class for each solved the problem
+* Navbar is not responsive to changes in size/ design desired
 * Issue with models.py when applied to products.json. On the 0001_initial.py was showing img_url on the fields migrated instead of image_url used on the product.json. the migration process had to be run twice in order to solve the issue as it wasn't applying the migration properly.
 
 ### Unfixed bugs
 * Minus button not in the correct place when there is a product selected and ready to add into the bag, I have tried move location, CSS but it is not fixed
-* Another bug unsolved due to lack to time is the links on my account, and shopping bag that change colour when moved to a different size such as mobile
+* I haven't managed to get favicon working properly, I generated the different icons and added them into the root of the website, as well as adding the links into the header, however it is showing an error
 ## Test user stories
 
 1. As a user you will be able to find the products that you are looking for:
     As a new parent I want to access the website and in an intuitive way I want to filter the products and find what I am looking for very easily.
-    The user has two different ways to filter the products. A dropdown that [filters](/static/docs/images/filters.png) by price, rating and category and another (Home and Nursery) that filters by Cot Bed, Chaning Units, chairs and all products.
+    The user has two different ways to filter the products. A dropdown that [filters](/static/docs/images/filters.png) by price, rating and category and another (Home and Nursery) that filters by Cot Bed, Changing Units, chairs and all products.
 
 2. As a user you will be able to click on them and see their characteristics:
     As a user I would like to have more information about the [product](/static/docs/images/product.png) that I am intended to buy, when the selected product is clicked, it shows the information and has the possibility to be added to the bag or keep shopping if the product is not meeting your expectations.
 
-3. As a user you will be able to add item to the bag:
-    Once the product is selected there is a button to [add it to the bag](/static/docs/images/stripe-sucess.png). In this case a message will pop up to inform the user taht the product has been successfully added to the bag.
+3. As a user you will be able to add items to the bag:
+    Once the product is selected there is a button to [add it to the bag](/static/docs/images/stripe-sucess.png). In this case a message will pop up to inform the user that the product has been successfully added to the bag.
     
-    Also the bag can be modified and the user can [remove](/static/docs/images/stripe_remove.png) an item that is already in there. The user will received another message informing that the product has been successfully removed.
+    Also the bag can be modified and the user can [remove](/static/docs/images/stripe_remove.png) an item that is already in there. The user will receive another message informing that the product has been successfully removed.
 
  4. As a user you will be able to check out and pay for your items: 
     The user will be able to do the checkout securely, the user will be redirected to the [shopping bag](/static/docs/images/shoppingbag.png)  screen.
-    Once in there the user will click the secure checkout button and be redirected to the [checkout](/static/docs/images/checkout.png) page and being to fill a form in order to get payement and get the product delivered.
+    Once in there the user will click the secure checkout button and be redirected to the [checkout](/static/docs/images/checkout.png) page and being to fill a form in order to get payment and get the product delivered.
 
-    After that the user will see a screen with all the information of the [purchase](/static/docs/images/checkout-success.png) and after clicking the checkout button a new screen with an spinnig icon will show while the payment on [Stripe](/static/docs/images/stripe.png) is being processed.
-    After this an email will be send to the address provided.
+    After that the user will see a screen with all the information of the [purchase](/static/docs/images/checkout-success.png) and after clicking the checkout button a new screen with a spinnig icon will show while the payment on [Stripe](/static/docs/images/stripe.png) is being processed.
+    After this an email will be sent to the address provided.
 
-5. As a superuser you will be able to add, [edit](/static/docs/images/edit-delete.png) and [delete](/static/docs/images/delete.png) products throught the [product management](/static/docs/images/product_management.png) tool
+5. As a superuser you will be able to add, [edit](/static/docs/images/edit-delete.png) and [delete](/static/docs/images/delete.png) products through the [product management](/static/docs/images/product_management.png) tool
 
 
 ## Deployment
@@ -292,7 +290,7 @@ In settings.py change the DEFAULT_FROM_EMAIL to your own email address.
 
 ## Credits
 
-- I have to thank my mentor Victor Miclovich for suggesting me the germen of the idea for this project, also for his patients and support and providing essential information on the calls during a very challenging time for me.
+- I have to thank my mentor Victor Miclovich for suggesting to me the germen of the idea for this project, also for his patients and support and for providing essential information on the calls during a very challenging time for me.
 - To create Be_my_baby I have followed the project Boutique Ado, from the Code Institute. The main functionality for this project has been taken from it. 
 - Images: To create this project I have used images from [Babyblooms](https://www.babyblooms.co.uk/collections/home-nursery)
 - [Code with Stein](https://www.youtube.com/c/CodeWithStein) has been quite useful in order to create the review section and the blog for this project.
