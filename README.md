@@ -153,6 +153,7 @@ To check the validity of the codes I have used
 
 * [PEP8Online](http://pep8online.com/)
     - For [urls.py](/static/docs/images/urls.py.png)
+    For python all the files were open using python3 -m flake8 on the terminal
 
 ### Performance
 
