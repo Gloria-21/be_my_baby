@@ -140,15 +140,20 @@ I used this tool as a main source to implement my code, trying the functionality
 ### Validator testing
 
 To check the validity of the codes I have used 
-* [W3C Markup Validation](https://validator.w3.org/)
-   - For [index.html](/static/docs/images/index_validator.png)
+* [W3C Markup Validation](https://validator.w3.org/) for HTML
+   - [Home](/static/docs/images/index_validator.png)
 
-* [W3C CSS Validation](/static/docs/images/validator-base.css.png)
+
+* [W3C CSS Validation](https://jigsaw.w3.org/css-validator) for CSS
+    - [base.css](/static/docs/images/validator-base.css.png)
+    - [profile](/static/docs/images/validator_css_profile.png)
 
 * [JS Hint](https://jshint.com/)
+    - [checkout](/static/docs/images/js_hint.png)
 
 * [PEP8Online](http://pep8online.com/)
     - For [urls.py](/static/docs/images/urls.py.png)
+    For python all the files were open using python3 -m flake8 on the terminal
 
 ### Performance
 
