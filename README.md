@@ -6,7 +6,7 @@
 Be my baby is an eCommerce site aimed to new parents or parents to be, that are looking for equipment for the new addition to the the family.
 This site is designed to be resposive and easy to navigate from different devices as well as to be accesible for all users.
 
-[View the live project here](https://be-my-baby.herokuapp.com/)
+[View the live project here](https://bemybaby-onrender-com.onrender.com)
 
 ##  Contents
 ### UX (User experience)
@@ -114,6 +114,7 @@ Regarding the reviews, I would like to improve the styling as again, due to time
     * [Heroku](https://www.heroku.com/home)
 
         Used for the deployment of live site
+        Recently migrated to [Render](https://render.com/)
     
     * [AWS](https://aws.amazon.com/)
 
